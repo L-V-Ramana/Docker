@@ -9,9 +9,7 @@ resource "aws_instance" "main"{
   }
     user_data = file("docker.sh")
 
-  tags = {
-    Name = "${var.project}-${var.environment}-docker"
-  }
+  tags = merge(local.common_tags,{name = "${var.project}-${var.environment}-docker"})
 }
 
 resource "aws_security_group" "allow_all_docker" {
