@@ -11,7 +11,7 @@ data "aws_ami" "joindevops" {
     values = ["hvm"]
   }
   filter {
-    name   = "Root device type"
+    name   = "root-device-type"
     values = ["EBS"]
   }     
 
