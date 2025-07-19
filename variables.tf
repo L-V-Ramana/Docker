@@ -3,5 +3,5 @@ variable "project"{
 }
 
 variable "environment"{
-    default = dev
+    default = "dev"
 }

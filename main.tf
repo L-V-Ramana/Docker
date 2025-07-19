@@ -9,7 +9,9 @@ resource "aws_instance" "main"{
   }
     user_data = file("docker.sh")
 
-  tags = local.common_tags
+  tags = {
+    Name = "${var.project}-${var.environment}-docker"
+  }
 }
 
 resource "aws_security_group" "allow_all_docker" {
