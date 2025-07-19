@@ -1,4 +1,4 @@
-data "aws_ami" "RHEL9" {
+data "aws_ami" "joindevops" {
   most_recent = true
 
   filter {

@@ -1,4 +1,4 @@
 locals{
-    ami= data.aws_ami.RHEL9.id
-    common_tags = merge(var.project,var.environment)
+    ami= data.aws_ami.joindevops.id
+    common_tags = merge({project = var.project},{environment = var.environment})
 }
